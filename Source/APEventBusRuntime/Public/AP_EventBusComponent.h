@@ -18,7 +18,7 @@
  * - Listen for specific tags via ListenForEvent + OnListenedEventReceived.
  * - Cache persistent events for late-joining clients via RegisterPersistentEvent.
  */
-UCLASS(ClassGroup="AP", meta=(BlueprintSpawnableComponent, DisplayName="AP_EventBus"))
+UCLASS(ClassGroup=(AfterPrime), meta=(BlueprintSpawnableComponent, DisplayName="AP_EventBus"))
 class APEVENTBUSRUNTIME_API UAP_EventBusComponent : public UActorComponent
 {
 	GENERATED_BODY()

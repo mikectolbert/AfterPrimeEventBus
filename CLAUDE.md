@@ -82,7 +82,7 @@ Used for both OnEventReceived (catch-all) and OnListenedEventReceived (filtered)
 
 **UCLASS Configuration:**
 ```cpp
-UCLASS(ClassGroup="AP", meta=(BlueprintSpawnableComponent, DisplayName="AP_EventBus"))
+UCLASS(ClassGroup=(AfterPrime), meta=(BlueprintSpawnableComponent, DisplayName="AP_EventBus"))
 class APEVENTBUSRUNTIME_API UAP_EventBusComponent : public UActorComponent
 ```
 
@@ -353,7 +353,7 @@ Use UE_LOG(LogEventBus, Warning, ...) for invalid state warnings (empty tag, non
 - Copyright notice first line of every source file: // Copyright AfterPrime Systems. All Rights Reserved.
 - All delegate payloads are self-contained — never require reading component state after the event fires
 - SetIsReplicatedByDefault(true) and PrimaryComponentTick.bCanEverTick = false in component constructor
-- ClassGroup="AP", meta=(DisplayName="AP_EventBus") on component UCLASS
+- ClassGroup=(AfterPrime), meta=(DisplayName="AP_EventBus") on component UCLASS
 
 ## Scope Boundaries
 This plugin does NOT:
