@@ -4,7 +4,7 @@
 	"VersionName": "1.0.0",
 	"FriendlyName": "AP Event Bus",
 	"Description": "Server-authoritative replicated event messaging for UE5 multiplayer. Publish and receive tag-based events from anywhere with scoped delivery and late-join cache. No GAS. No direct references. Free.",
-	"Category": "Gameplay",
+	"Category": "AfterPrime Systems",
 	"CreatedBy": "AfterPrime Systems",
 	"CreatedByURL": "",
 	"DocsURL": "",
