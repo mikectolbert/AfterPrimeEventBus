@@ -27,7 +27,7 @@ static FAP_EventPayload MakeTestPayload(const FName& TagName, float Magnitude = 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_PublishFiresOnEventReceived,
 	"AfterPrime.EventBus.PublishEvent.FiresOnEventReceived",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_PublishFiresOnEventReceived::RunTest(const FString& Parameters)
 {
@@ -47,7 +47,7 @@ bool FAP_EventBus_PublishFiresOnEventReceived::RunTest(const FString& Parameters
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_ListenForMatchingTagFires,
 	"AfterPrime.EventBus.Listeners.MatchingTagFiresOnListenedEventReceived",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_ListenForMatchingTagFires::RunTest(const FString& Parameters)
 {
@@ -66,7 +66,7 @@ bool FAP_EventBus_ListenForMatchingTagFires::RunTest(const FString& Parameters)
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_ListenForNonMatchingTagDoesNotFire,
 	"AfterPrime.EventBus.Listeners.NonMatchingTagDoesNotFireOnListenedEventReceived",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_ListenForNonMatchingTagDoesNotFire::RunTest(const FString& Parameters)
 {
@@ -85,7 +85,7 @@ bool FAP_EventBus_ListenForNonMatchingTagDoesNotFire::RunTest(const FString& Par
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_StopListeningPreventsFilteredDispatch,
 	"AfterPrime.EventBus.Listeners.StopListeningPreventsFilteredDispatch",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_StopListeningPreventsFilteredDispatch::RunTest(const FString& Parameters)
 {
@@ -104,7 +104,7 @@ bool FAP_EventBus_StopListeningPreventsFilteredDispatch::RunTest(const FString& 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_RegisterPersistentEventCachesPayload,
 	"AfterPrime.EventBus.Cache.RegisterPersistentEventCachesPayload",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_RegisterPersistentEventCachesPayload::RunTest(const FString& Parameters)
 {
@@ -123,7 +123,7 @@ bool FAP_EventBus_RegisterPersistentEventCachesPayload::RunTest(const FString& P
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_WasEventFiredReturnsCorrectState,
 	"AfterPrime.EventBus.Query.WasEventFiredReturnsCorrectState",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_WasEventFiredReturnsCorrectState::RunTest(const FString& Parameters)
 {
@@ -142,7 +142,7 @@ bool FAP_EventBus_WasEventFiredReturnsCorrectState::RunTest(const FString& Param
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(
 	FAP_EventBus_GetLastPayloadReturnsCachedPayload,
 	"AfterPrime.EventBus.Query.GetLastPayloadReturnsCachedPayload",
-	EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter)
+	EAutomationTestFlags_ApplicationContextMask | EAutomationTestFlags::ProductFilter)
 
 bool FAP_EventBus_GetLastPayloadReturnsCachedPayload::RunTest(const FString& Parameters)
 {
