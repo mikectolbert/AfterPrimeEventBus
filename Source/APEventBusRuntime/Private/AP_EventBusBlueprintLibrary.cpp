@@ -3,6 +3,7 @@
 #include "AP_EventBusBlueprintLibrary.h"
 #include "AP_EventBusComponent.h"
 #include "GameFramework/GameStateBase.h"
+#include "Engine/Engine.h"
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
 
