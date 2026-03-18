@@ -27,7 +27,7 @@ void UAP_EventBusComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// Clients request any cached persistent events from the server.
-	if (!HasAuthority())
+	if (GetOwner() && !GetOwner()->HasAuthority())
 	{
 		ServerRequestCachedEvents();
 	}
@@ -74,7 +74,7 @@ void UAP_EventBusComponent::PublishEvent(FAP_EventPayload Payload, EAP_EventScop
 	}
 
 	// Non-local scope on client: transparently route to server.
-	if (!HasAuthority())
+	if (!GetOwner()->HasAuthority())
 	{
 		ServerPublishEvent(Payload, Scope);
 		return;
@@ -188,7 +188,7 @@ bool UAP_EventBusComponent::IsListeningForEvent(FGameplayTag Tag) const
 
 void UAP_EventBusComponent::RegisterPersistentEvent(FGameplayTag Tag)
 {
-	if (!HasAuthority())
+	if (!GetOwner()->HasAuthority())
 	{
 		UE_LOG(LogEventBus, Warning,
 			TEXT("UAP_EventBusComponent::RegisterPersistentEvent — must be called on server. Ignored."));
@@ -207,7 +207,7 @@ void UAP_EventBusComponent::RegisterPersistentEvent(FGameplayTag Tag)
 
 void UAP_EventBusComponent::UnregisterPersistentEvent(FGameplayTag Tag)
 {
-	if (!HasAuthority())
+	if (!GetOwner()->HasAuthority())
 	{
 		UE_LOG(LogEventBus, Warning,
 			TEXT("UAP_EventBusComponent::UnregisterPersistentEvent — must be called on server. Ignored."));
