@@ -1,0 +1,9 @@
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+*.uasset
+*.umap
+*.udk
+SCRATCHPAD.md
